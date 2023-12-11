@@ -44,8 +44,6 @@ function getTiltAngle(solarHourAngle, solarDeclinationAngle, inputValue) {
 app.post('/calculate', (req, res) => {
   try {
     const inputValue = req.body.latitude;
-    console.log(inputValue);
-
     const currentDate = new Date();
     const dayOfYear = getDayOfYear(currentDate);
     const solarDeclinationAngle = get_solar_declination_angle(dayOfYear);
